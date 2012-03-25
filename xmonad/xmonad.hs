@@ -14,7 +14,7 @@ import XMonad.Hooks.SetWMName
 main = do
   xmproc <- spawnPipe "xmobar"
   trayerproc <- unsafeSpawn "trayer --edge top --align right --SetDockType true --SetPartialStrut true --transparent true --expand true --width 7 --tint 0x191970 --height 12 &"
-  nmApplet <- unsafeSpawn "nm-applet"
+  nmApplet <- unsafeSpawn "wicd-gtk"
   pulseaudio <- unsafeSpawn "start-pulseaudio-kde"
   xmonad $ defaultConfig {
                manageHook = manageDocks <+> manageHook defaultConfig,
