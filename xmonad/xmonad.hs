@@ -25,7 +25,7 @@ main = do
   xmproc <- spawnPipe "xmobar"
   trayerproc <- unsafeSpawn "trayer --edge top --align right --SetDockType true --SetPartialStrut true --transparent true --expand true --width 7 --tint 0x191970 --height 12 &"
   kopete <- unsafeSpawn "if [[ `pgrep -u aaron kopete` == '' ]] then; kopete; fi"
-  nmApplet <- unsafeSpawn "wicd-gtk -t"
+  nmApplet <- unsafeSpawn "cmst"
   pulseaudio <- unsafeSpawn "start-pulseaudio-kde"
   xmonad $ defaultConfig {
                manageHook = manageDocks <+> manageHook defaultConfig,
